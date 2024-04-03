@@ -86,8 +86,8 @@ export default function RadialBarChart({
           {data.map((d) => {
             const letter = getLetter(d);
             const startAngle = xScale(letter);
-            const midAngle = startAngle + xScale.bandwidth() / 2;
-            const endAngle = startAngle + xScale.bandwidth();
+            const midAngle = startAngle! + xScale.bandwidth() / 2;
+            const endAngle = startAngle! + xScale.bandwidth();
 
             const outerRadius = yScale(getLetterFrequency(d)) ?? 0;
 
