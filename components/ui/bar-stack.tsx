@@ -13,7 +13,7 @@ import { useTooltip, useTooltipInPortal, defaultStyles } from '@visx/tooltip';
 import { LegendOrdinal } from '@visx/legend';
 import { localPoint } from '@visx/event';
 
-type CityName = 'Angular' | '.NET' | 'Python';
+type CityName = 'New York' | 'San Francisco' | 'Austin';
 
 type TooltipData = {
   bar: SeriesPoint<CityTemperature>;
