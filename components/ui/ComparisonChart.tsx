@@ -30,6 +30,7 @@ export const options = {
     },
   },
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: 'right' as const,
@@ -41,15 +42,7 @@ export const options = {
   },
 };
 
-const labels = [
-  'Angular',
-  '.NET',
-  'Python',
-  'Docker',
-  'Cloud',
-  'Testing',
-  'Communication',
-];
+const labels = ['Angular', '.NET', 'Python', 'Docker', 'Cloud', 'Testing'];
 
 export const data = {
   labels,

@@ -627,18 +627,13 @@ export default function Example2() {
               </Card>
             </form>
           </div>
-          <div className="relative flex flex-col rounded-xl bg-muted/50 p-4 lg:col-span-2">
+          <div className="relative flex flex-col rounded-xl p-4 lg:col-span-2">
             <Badge variant="outline" className="absolute right-3 top-3">
               Output
             </Badge>
             <div className="flex-1 min-h-full">
               <ComparisonChart />
             </div>
-            <form className="relative overflow-hidden rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring">
-              <Label htmlFor="message" className="sr-only">
-                Message
-              </Label>
-            </form>
           </div>
         </main>
       </div>
