@@ -616,7 +616,7 @@ export default function Dashboard() {
                     <li className="flex items-center justify-between">
                       <span className="text-muted-foreground">.NET</span>
                       <span className="font-semibold">
-                        5 <span className="font-light">{''}(+3)</span>
+                        3 <span className="font-light">{''}(+3)</span>
                       </span>
                     </li>
                   </ul>
