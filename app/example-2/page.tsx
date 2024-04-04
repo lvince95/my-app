@@ -382,8 +382,65 @@ export default function Example2() {
                   </Select>
                 </div>
                 <div className="grid gap-3">
-                  <Label htmlFor="temperature"></Label>
-                  <Input id="temperature" type="number" placeholder="0.4" />
+                  <Label htmlFor="model2">Language</Label>
+                  <Select>
+                    <SelectTrigger
+                      id="model2"
+                      className="items-start [&_[data-description]]:hidden"
+                    >
+                      <SelectValue placeholder="Select a framework" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="genesis">
+                        <div className="flex items-start gap-3 text-muted-foreground">
+                          <Rabbit className="size-5" />
+                          <div className="grid gap-0.5">
+                            <p>
+                              Typescript{' '}
+                              <span className="font-medium text-foreground">
+                                Angular
+                              </span>
+                            </p>
+                            <p className="text-xs" data-description>
+                              Frontend Javascript Framework
+                            </p>
+                          </div>
+                        </div>
+                      </SelectItem>
+                      <SelectItem value="explorer">
+                        <div className="flex items-start gap-3 text-muted-foreground">
+                          <Bird className="size-5" />
+                          <div className="grid gap-0.5">
+                            <p>
+                              Python{' '}
+                              <span className="font-medium text-foreground">
+                                FastAPI
+                              </span>
+                            </p>
+                            <p className="text-xs" data-description>
+                              Backend framework using Python
+                            </p>
+                          </div>
+                        </div>
+                      </SelectItem>
+                      <SelectItem value="quantum">
+                        <div className="flex items-start gap-3 text-muted-foreground">
+                          <Turtle className="size-5" />
+                          <div className="grid gap-0.5">
+                            <p>
+                              C#{' '}
+                              <span className="font-medium text-foreground">
+                                .NET
+                              </span>
+                            </p>
+                            <p className="text-xs" data-description>
+                              Stable and Scalable backend framework
+                            </p>
+                          </div>
+                        </div>
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="grid gap-3">
@@ -441,7 +498,7 @@ export default function Example2() {
                       <TableRow>
                         <TableHead className="w-[100px]">Skill</TableHead>
                         <TableHead>Y.O.E</TableHead>
-                        <TableHead>Price</TableHead>
+                        <TableHead>Capacity</TableHead>
                         <TableHead className="w-[100px]">Competency</TableHead>
                       </TableRow>
                     </TableHeader>
@@ -483,9 +540,7 @@ export default function Example2() {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-semibold">
-                          GGPC-002
-                        </TableCell>
+                        <TableCell className="font-semibold">.NET</TableCell>
                         <TableCell>
                           <Label htmlFor="stock-2" className="sr-only">
                             Stock
@@ -521,9 +576,7 @@ export default function Example2() {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-semibold">
-                          GGPC-003
-                        </TableCell>
+                        <TableCell className="font-semibold">Python</TableCell>
                         <TableCell>
                           <Label htmlFor="stock-3" className="sr-only">
                             Stock
