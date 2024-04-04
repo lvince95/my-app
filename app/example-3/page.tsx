@@ -104,7 +104,7 @@ export default function Example3() {
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <ShoppingCart className="h-5 w-5" />
+                  <LineChart className="h-5 w-5" />
                   <span className="sr-only">Orders</span>
                 </Link>
               </TooltipTrigger>
@@ -133,18 +133,6 @@ export default function Example3() {
                 </Link>
               </TooltipTrigger>
               <TooltipContent side="right">Customers</TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-                >
-                  <LineChart className="h-5 w-5" />
-                  <span className="sr-only">Analytics</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Analytics</TooltipContent>
             </Tooltip>
           </nav>
           <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
@@ -229,12 +217,8 @@ export default function Example3() {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="#">Products</Link>
+                  <Link href="#">Analytics</Link>
                 </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>All Products</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
@@ -305,9 +289,7 @@ export default function Example3() {
                       Active
                     </DropdownMenuCheckboxItem>
                     <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>
-                      Archived
-                    </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>Others</DropdownMenuCheckboxItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
                 <Button size="sm" variant="outline" className="h-8 gap-1">
@@ -355,10 +337,8 @@ export default function Example3() {
             <TabsContent value="heatmap">
               <Card>
                 <CardHeader>
-                  <CardTitle>Products</CardTitle>
-                  <CardDescription>
-                    Manage your products and view their sales performance.
-                  </CardDescription>
+                  <CardTitle>Heatmap</CardTitle>
+                  <CardDescription>Some Description</CardDescription>
                 </CardHeader>
                 <CardContent className="w-full h-[35vw] flex items-center justify-center">
                   <div className="w-full h-full">
