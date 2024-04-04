@@ -301,7 +301,7 @@ export default function Example3() {
                 <Button size="sm" className="h-8 gap-1">
                   <PlusCircle className="h-3.5 w-3.5" />
                   <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                    Add Product
+                    Save Results
                   </span>
                 </Button>
               </div>

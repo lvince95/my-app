@@ -64,6 +64,7 @@ import {
 } from '@/components/ui/table';
 
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { Separator } from '@/components/ui/separator';
 
 export default function Example2() {
   return (
@@ -382,13 +383,13 @@ export default function Example2() {
                   </Select>
                 </div>
                 <div className="grid gap-3">
-                  <Label htmlFor="model2">Language</Label>
+                  <Label htmlFor="model2">Programming Language</Label>
                   <Select>
                     <SelectTrigger
                       id="model2"
                       className="items-start [&_[data-description]]:hidden"
                     >
-                      <SelectValue placeholder="Select a framework" />
+                      <SelectValue placeholder="Select a programming language" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="genesis">
@@ -452,39 +453,46 @@ export default function Example2() {
                     <Input id="top-k" type="number" placeholder="5" />
                   </div>
                 </div>
-              </fieldset>
-              <fieldset className="grid gap-6 rounded-lg border p-4">
-                <legend className="-ml-1 px-1 text-sm font-medium">
-                  Details
-                </legend>
-                <div className="grid gap-3">
-                  <Label htmlFor="role">Seniority</Label>
-                  <Select defaultValue="system">
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a role" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="system">Lead</SelectItem>
-                      <SelectItem value="user">Senior</SelectItem>
-                      <SelectItem value="assistant">Mid-Level</SelectItem>
-                      <SelectItem value="junior">Junior</SelectItem>
-                    </SelectContent>
-                  </Select>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="grid gap-3">
+                    <Label htmlFor="role">Seniority</Label>
+                    <Select defaultValue="system">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a role" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="system">Lead</SelectItem>
+                        <SelectItem value="user">Senior</SelectItem>
+                        <SelectItem value="assistant">Mid-Level</SelectItem>
+                        <SelectItem value="junior">Junior</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="grid gap-3">
+                    <Label htmlFor="role">Role</Label>
+                    <Select defaultValue="system">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a role" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="system">
+                          Software Engineer
+                        </SelectItem>
+                        <SelectItem value="user">Data Engineer</SelectItem>
+                        <SelectItem value="assistant">
+                          Data Scientist
+                        </SelectItem>
+                        <SelectItem value="junior">DevOps Engineer</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
-                <div className="grid gap-3">
-                  <Label htmlFor="role">Role</Label>
-                  <Select defaultValue="system">
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a role" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="system">Software Engineer</SelectItem>
-                      <SelectItem value="user">Data Engineer</SelectItem>
-                      <SelectItem value="assistant">Data Scientist</SelectItem>
-                      <SelectItem value="junior">DevOps Engineer</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                <Separator />
+                <Button size="sm" variant="ghost" className="gap-1">
+                  <PlusCircle className="h-3.5 w-3.5" />
+                  Add Entry
+                </Button>
               </fieldset>
 
               <Card>
@@ -619,11 +627,11 @@ export default function Example2() {
               </Card>
             </form>
           </div>
-          <div className="relative flex min-h-[50vh] flex-col rounded-xl bg-muted/50 p-4 lg:col-span-2">
+          <div className="relative flex flex-col rounded-xl bg-muted/50 p-4 lg:col-span-2">
             <Badge variant="outline" className="absolute right-3 top-3">
               Output
             </Badge>
-            <div className="flex-1 h-full">
+            <div className="flex-1 min-h-full">
               <ComparisonChart />
             </div>
             <form className="relative overflow-hidden rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring">
