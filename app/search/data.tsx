@@ -144,8 +144,8 @@ export const mails = [
     chart: [
       { month: "Exception Handling", desktop: 2 },
       { month: "Async", desktop: 1 },
-      { month: "Logging", desktop: 3 },
-      { month: "Design Patterns", desktop: 3 },
+      { month: "Logging", desktop: 2 },
+      { month: "Design Patterns", desktop: 4 },
       { month: "OOP", desktop: 2 },
       { month: "Typing", desktop: 2 },
     ],
