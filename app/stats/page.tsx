@@ -94,6 +94,10 @@ export default function LevelsComponent() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="python">Python Programming</SelectItem>
+                <SelectItem value="dev">Python Dev Environments</SelectItem>
+                <SelectItem value="fundamental">
+                  Fundamental Libraries
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>

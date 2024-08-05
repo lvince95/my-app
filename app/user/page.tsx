@@ -1,5 +1,3 @@
-import { PythonDevEnvironmentsRadarComponent } from "./components/python-dev-environments";
-import { PythonProgrammingRadarComponent } from "./components/python-programming-radar";
 import UserBanner from "./components/user-banner";
 import UserDetails from "./components/user-details";
 import { UserRadarOneComponent } from "./components/user-radar-one";
