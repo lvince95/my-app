@@ -269,7 +269,7 @@ export default function RootLayout({
                     <BreadcrumbItem>
                       <BreadcrumbLink asChild>
                         <Link href="#" className="text-xl">
-                          {pathname[1].toUpperCase() + pathname.substring(2)}
+                          {pathname.substring(1)}
                         </Link>
                       </BreadcrumbLink>
                     </BreadcrumbItem>
