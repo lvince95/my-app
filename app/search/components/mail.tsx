@@ -69,7 +69,7 @@ export function Mail({ mails, defaultCollapsed = false }: MailProps) {
     <div className="grid grid-cols-5 max-h-[calc(100vh_-_6rem)]">
       <div className="border-r">
         <div className={cn("flex h-[52px] items-center px-4")}>
-          <h2 className="text-xl font-bold">Required Skills</h2>
+          <h2 className="text-xl font-bold">Filters</h2>
         </div>
         <Separator />
         <div className="group flex flex-col gap-4 py-2 px-4">
