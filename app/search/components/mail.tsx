@@ -82,7 +82,7 @@ export function Mail({ mails, defaultCollapsed = false }: MailProps) {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="python">Python Programming</SelectItem>
-              <SelectItem value="dev">Python Dev Environments</SelectItem>
+              <SelectItem value="dev">Dev Environments</SelectItem>
               <SelectItem value="fundamental">Fundamental Libraries</SelectItem>
             </SelectContent>
           </Select>
