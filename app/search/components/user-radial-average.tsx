@@ -36,27 +36,27 @@ export function UserRadialAverageComponent({ data }: any) {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Time in OptiCab</CardTitle>
+        <CardTitle>{data.text}</CardTitle>
         <CardDescription>May 2022 - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square max-h-[180px]"
         >
           <RadialBarChart
             data={chartData}
             startAngle={0}
             endAngle={250}
-            innerRadius={80}
-            outerRadius={110}
+            innerRadius={50}
+            outerRadius={80}
           >
             <PolarGrid
               gridType="circle"
               radialLines={false}
               stroke="none"
               className="first:fill-muted last:fill-background"
-              polarRadius={[86, 74]}
+              polarRadius={[56, 44]}
             />
             <RadialBar dataKey="years" background cornerRadius={10} />
             <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>

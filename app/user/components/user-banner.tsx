@@ -6,6 +6,7 @@ import {
   MapPinIcon,
   PencilIcon,
 } from "@heroicons/react/20/solid";
+import { Zap } from "lucide-react";
 import Image from "next/image";
 
 export default function UserBanner() {
@@ -32,7 +33,7 @@ export default function UserBanner() {
             <div>
               <h1 className="text-2xl font-bold text-gray-900">John Doe</h1>
               <p className="text-sm font-medium text-gray-900">
-                Senior Software Developer
+                Front End Developer
               </p>
               <p className="text-sm font-medium text-gray-500">
                 johdo@orsted.com
@@ -50,6 +51,13 @@ export default function UserBanner() {
               aria-hidden="true"
             />
             Edit
+          </button>
+          <button
+            type="button"
+            className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            <Zap className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
+            Training
           </button>
         </div>
       </div>

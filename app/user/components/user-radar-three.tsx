@@ -26,12 +26,13 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 const chartData = [
-  { month: "Object Orieted Programming", desktop: 3.2, mobile: 3 },
-  { month: "Dynamic Typing", desktop: 2, mobile: 3.6 },
-  { month: "Exception Handling", desktop: 4, mobile: 2.5 },
-  { month: "Logging Libraries", desktop: 2, mobile: 1.9 },
-  { month: "Async Programming", desktop: 1, mobile: 3 },
-  { month: "Design Patterns", desktop: 3, mobile: 1.9 },
+  { month: "Pydantic", desktop: 2, mobile: 2.7 },
+  { month: "Pytest & unittest", desktop: 1, mobile: 2.2 },
+  { month: "Fastavro", desktop: 3, mobile: 1.3 },
+  { month: "Fastparquet", desktop: 4, mobile: 3.1 },
+  { month: "pip", desktop: 2, mobile: 3.3 },
+  { month: "itertools", desktop: 2, mobile: 2.5 },
+  { month: "configparser", desktop: 3, mobile: 1.9 },
 ];
 
 const chartConfig = {
@@ -45,11 +46,11 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function UserRadarOneComponent() {
+export function UserRadarThreeComponent() {
   return (
     <Card>
       <CardHeader className="items-center pb-4">
-        <CardTitle>Python Programming</CardTitle>
+        <CardTitle>Fundamental Libraries</CardTitle>
         <CardDescription>Showing ratings for each subcategory</CardDescription>
       </CardHeader>
       <CardContent>

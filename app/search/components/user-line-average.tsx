@@ -21,7 +21,7 @@ export default function UserLineAverageComponent({ data }: any) {
       <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2 [&>div]:flex-1">
         <div>
           <CardDescription>Average Rating</CardDescription>
-          <CardTitle className="flex items-baseline gap-1 text-4xl tabular-nums">
+          <CardTitle className="flex items-baseline gap-1 text-3xl tabular-nums">
             {data.rating}
           </CardTitle>
         </div>

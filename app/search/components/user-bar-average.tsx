@@ -28,7 +28,7 @@ import {
 const chartConfig = {
   desktop: {
     label: "Rating",
-    color: "hsl(var(--chart-1))",
+    color: "hsl(var(--chart-2))",
   },
   mobile: {
     label: "Mobile",
@@ -43,7 +43,7 @@ export function UserBarAverageComponent({ data }: any) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart</CardTitle>
+        <CardTitle>Python Programming</CardTitle>
         <CardDescription>Showing ratings in each subcategory</CardDescription>
       </CardHeader>
       <CardContent>

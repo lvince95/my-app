@@ -102,7 +102,7 @@ export function MailDisplay({ mail }: MailDisplayProps) {
                   </p>
                 </div>
                 <div className="mt-4">
-                  <UserRadarAverageComponent data={mail.chart} />
+                  <UserBarAverageComponent data={mail.chart} />
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <UserLineAverageComponent data={mail} />

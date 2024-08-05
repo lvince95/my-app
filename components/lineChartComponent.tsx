@@ -115,11 +115,11 @@ const chartConfig = {
     label: "Developers",
   },
   desktop: {
-    label: "Angular",
+    label: "Design Patterns",
     color: "hsl(var(--chart-1))",
   },
   mobile: {
-    label: "Python",
+    label: "Logging Libraries",
     color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig;
@@ -130,8 +130,8 @@ export function LineChartComponent() {
 
   const total = React.useMemo(
     () => ({
-      desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
-      mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0),
+      desktop: 3.2,
+      mobile: 2.5,
     }),
     [],
   );
@@ -140,9 +140,10 @@ export function LineChartComponent() {
     <Card>
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
-          <CardTitle>Team Skill Growth</CardTitle>
+          <CardTitle>Python Programming</CardTitle>
           <CardDescription>
-            Showing team skill growth over the last 3 months
+            Showing the change in rating of each sub category over the last 3
+            months
           </CardDescription>
         </div>
         <div className="flex">

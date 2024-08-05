@@ -9,6 +9,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { UserRadarTwoComponent } from "./components/user-radar-two";
+import { UserRadarThreeComponent } from "./components/user-radar-three";
 
 export default function UserComponent() {
   return (
@@ -30,13 +32,13 @@ export default function UserComponent() {
             <AccordionItem value="item-2">
               <AccordionTrigger>Python Dev Environments</AccordionTrigger>
               <AccordionContent>
-                <UserRadarOneComponent />
+                <UserRadarTwoComponent />
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
               <AccordionTrigger>Fundamental Libraries</AccordionTrigger>
               <AccordionContent>
-                <UserRadarOneComponent />
+                <UserRadarThreeComponent />
               </AccordionContent>
             </AccordionItem>
           </Accordion>

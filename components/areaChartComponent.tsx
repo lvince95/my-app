@@ -121,14 +121,14 @@ const chartData = [
 
 const chartConfig = {
   visitors: {
-    label: "Developers",
+    label: "Visitors",
   },
   desktop: {
-    label: "Angular",
+    label: "Design Patterns",
     color: "hsl(var(--chart-1))",
   },
   mobile: {
-    label: "Python",
+    label: "Logging Libraries",
     color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig;
@@ -151,11 +151,12 @@ export function AreaChartComponent() {
 
   return (
     <Card>
-      <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
-        <div className="grid flex-1 py-2 gap-1 text-center sm:text-left">
-          <CardTitle>Team Skill Growth</CardTitle>
+      <CardHeader className="flex items-center gap-2 space-y-0 border-b py-9 sm:flex-row">
+        <div className="grid flex-1 gap-1 text-center sm:text-left">
+          <CardTitle>Python Programming</CardTitle>
           <CardDescription>
-            Showing team skill growth over the last 3 months
+            Showing the change in rating of each sub category over the last 3
+            months
           </CardDescription>
         </div>
         <Select value={timeRange} onValueChange={setTimeRange}>

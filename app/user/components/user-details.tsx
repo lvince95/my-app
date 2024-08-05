@@ -92,7 +92,7 @@ export default function UserDetails() {
                     />
                     <div className="ml-4 flex min-w-0 flex-1 gap-2">
                       <span className="truncate font-medium">
-                        resume_back_end_developer.pdf
+                        resume_software_developer.pdf
                       </span>
                       <span className="flex-shrink-0 text-gray-400">2.4mb</span>
                     </div>
@@ -106,7 +106,7 @@ export default function UserDetails() {
                     />
                     <div className="ml-4 flex min-w-0 flex-1 gap-2">
                       <span className="truncate font-medium">
-                        coverletter_back_end_developer.pdf
+                        coverletter_software_developer.pdf
                       </span>
                       <span className="flex-shrink-0 text-gray-400">4.5mb</span>
                     </div>
