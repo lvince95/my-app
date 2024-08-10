@@ -25,9 +25,6 @@ import { AreaChartComponent } from "@/components/areaChartComponent";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LineChartComponent } from "@/components/lineChartComponent";
 import { BarChartComponent } from "@/components/barChartComponent";
-import { BarChartMultipleComponent } from "../growth/components/BarChartMultiple";
-import { BarChartMixedComponent } from "../growth/components/BarChartMixed";
-import { LineChartMultipleComponent } from "@/components/lineChartMultipleComponent";
 import {
   Card,
   CardContent,
@@ -36,7 +33,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { DataTableDemo } from "@/components/ui/data-table";
 
 export default function LevelsComponent() {
