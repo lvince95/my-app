@@ -74,6 +74,39 @@ export function Mail({ mails, defaultCollapsed = false }: MailProps) {
         <Separator />
         <div className="group flex flex-col gap-4 py-2 px-4">
           <Label htmlFor="category" className="mt-2">
+            Delivery Organization
+          </Label>
+          <Select defaultValue="all">
+            <SelectTrigger id="category" aria-label="Select category">
+              <SelectValue placeholder="Select a DO" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All</SelectItem>
+              <SelectItem value="ecst">EC_ST</SelectItem>
+              <SelectItem value="dnd">DnD</SelectItem>
+              <SelectItem value="trace">Trace</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="group flex flex-col gap-4 py-2 px-4">
+          <Label htmlFor="category" className="mt-2">
+            Role
+          </Label>
+          <Select defaultValue="all">
+            <SelectTrigger id="category" aria-label="Select category">
+              <SelectValue placeholder="Select a category" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All</SelectItem>
+              <SelectItem value="python">Python Developer</SelectItem>
+              <SelectItem value="net">.NET Developer</SelectItem>
+              <SelectItem value="test">Test Engineer</SelectItem>
+              <SelectItem value="data">Data Engineer</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="group flex flex-col gap-4 py-2 px-4">
+          <Label htmlFor="category" className="mt-2">
             Category
           </Label>
           <Select defaultValue="python">
@@ -99,23 +132,6 @@ export function Mail({ mails, defaultCollapsed = false }: MailProps) {
               </p>
             }
           />
-        </div>
-
-        <div className="group flex flex-col gap-4 py-2 px-4">
-          <Label htmlFor="category" className="mt-2">
-            Delivery Organization
-          </Label>
-          <Select defaultValue="all">
-            <SelectTrigger id="category" aria-label="Select category">
-              <SelectValue placeholder="Select a DO" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All</SelectItem>
-              <SelectItem value="ecst">EC_ST</SelectItem>
-              <SelectItem value="dnd">DnD</SelectItem>
-              <SelectItem value="trace">Trace</SelectItem>
-            </SelectContent>
-          </Select>
         </div>
       </div>
       <div className="col-span-2 border-r">

@@ -44,39 +44,9 @@ export default function LevelsComponent() {
     <div className="container mx-auto pb-12 pt-4 px-4 md:px-6">
       <h1 className="text-3xl font-bold mb-4">MY CC Software Engineering VI</h1>
 
-      <Tabs defaultValue="area">
-        <TabsList>
-          <TabsTrigger value="area">Area Chart</TabsTrigger>
-          <TabsTrigger value="bar">Bar Chart</TabsTrigger>
-          <TabsTrigger value="line">Line Chart</TabsTrigger>
-        </TabsList>
-        <TabsContent value="area">
-          <div className="grid flex-1 items-start gap-4  md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-            <div className="col-span-3">
-              <AreaChartComponent />
-            </div>
-          </div>
-        </TabsContent>
-
-        <TabsContent value="bar">
-          <div className="grid flex-1 items-start gap-4  md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-            <div className="col-span-3">
-              <BarChartComponent />
-            </div>
-          </div>
-        </TabsContent>
-        <TabsContent value="line">
-          <div className="grid flex-1 items-start gap-4  md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-            <div className="col-span-3">
-              <LineChartComponent />
-            </div>
-          </div>
-        </TabsContent>
-      </Tabs>
-
-      <div className="grid gap-8 mt-8">
+      <div className="grid gap-8">
         <div>
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl font-semibold mb-1">
             Employee Proficiency Levels
           </h2>
           <p className="text-muted-foreground">
@@ -198,6 +168,36 @@ export default function LevelsComponent() {
           </h2>
           <DataTableDemo />
         </div>
+
+        <Tabs defaultValue="area">
+          <TabsList>
+            <TabsTrigger value="area">Area Chart</TabsTrigger>
+            <TabsTrigger value="bar">Bar Chart</TabsTrigger>
+            <TabsTrigger value="line">Line Chart</TabsTrigger>
+          </TabsList>
+          <TabsContent value="area">
+            <div className="grid flex-1 items-start gap-4  md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
+              <div className="col-span-3">
+                <AreaChartComponent />
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="bar">
+            <div className="grid flex-1 items-start gap-4  md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
+              <div className="col-span-3">
+                <BarChartComponent />
+              </div>
+            </div>
+          </TabsContent>
+          <TabsContent value="line">
+            <div className="grid flex-1 items-start gap-4  md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
+              <div className="col-span-3">
+                <LineChartComponent />
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );

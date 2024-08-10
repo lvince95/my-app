@@ -232,7 +232,7 @@ export function DataTableDemo() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <DropdownMenuItem onClick={() => router.push("user")}>
+              <DropdownMenuItem onClick={() => router.push("/user")}>
                 View Profile
               </DropdownMenuItem>
             </DropdownMenuContent>

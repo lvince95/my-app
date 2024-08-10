@@ -1,3 +1,4 @@
+"use client";
 import {
   BriefcaseIcon,
   CalendarIcon,
@@ -8,8 +9,10 @@ import {
 } from "@heroicons/react/20/solid";
 import { Zap } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function UserBanner() {
+  const router = useRouter();
   return (
     <>
       <div className="md:flex md:items-center md:justify-between md:space-x-5">
@@ -55,6 +58,7 @@ export default function UserBanner() {
           <button
             type="button"
             className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            onClick={() => router.push("/training")}
           >
             <Zap className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
             Training

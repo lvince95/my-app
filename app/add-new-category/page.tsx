@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -71,25 +73,38 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useRouter } from "next/navigation";
 
-export default function AddSkill() {
+export default function AddNewCategoryComponent() {
+  const router = useRouter();
   return (
     <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
-      <div className="mx-auto grid w-1/2 flex-1 auto-rows-max gap-4">
+      <div className="mx-auto grid w-3/4 flex-1 auto-rows-max gap-4">
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="icon" className="h-7 w-7">
+          <Button
+            variant="outline"
+            size="icon"
+            className="h-7 w-7"
+            onClick={() => router.push("/categories")}
+          >
             <ChevronLeft className="h-4 w-4" />
             <span className="sr-only">Back</span>
           </Button>
           <h1 className="flex-1 shrink-0 whitespace-nowrap text-xl font-semibold tracking-tight sm:grow-0">
-            Python Programming
+            New Category
           </h1>
 
           <div className="hidden items-center gap-2 md:ml-auto md:flex">
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => router.push("/categories")}
+            >
               Discard
             </Button>
-            <Button size="sm">Save Changes</Button>
+            <Button size="sm" onClick={() => router.push("/categories")}>
+              Save Changes
+            </Button>
           </div>
         </div>
         <div className="grid gap-4 md:grid-cols-[1fr_250px] lg:grid-cols-3 lg:gap-8">
@@ -107,14 +122,14 @@ export default function AddSkill() {
                       id="name"
                       type="text"
                       className="w-full"
-                      defaultValue="Python Programming"
+                      placeholder="Enter a name..."
                     />
                   </div>
                   <div className="grid gap-3">
                     <Label htmlFor="description">Description</Label>
                     <Textarea
                       id="description"
-                      defaultValue="Core python programming knowledge"
+                      placeholder="Enter a description..."
                       className="min-h-16"
                     />
                   </div>
@@ -128,47 +143,7 @@ export default function AddSkill() {
                   All the subcategories required
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Name</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell className="font-semibold">
-                        Object Oriented Programming
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-semibold">
-                        Dynamic Typing{" "}
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-semibold">
-                        Exception Handling
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-semibold">
-                        Logging Libraries
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-semibold">
-                        Async Programming
-                      </TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-semibold">
-                        Design Patterns
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </CardContent>
+              <CardContent></CardContent>
               <CardFooter className="justify-center border-t p-4">
                 <Dialog>
                   <DialogTrigger asChild>
