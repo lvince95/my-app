@@ -52,6 +52,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useState } from "react";
 
 const OPTIONS: Option[] = [
   { label: "OOP", value: "oop" },
@@ -62,8 +63,12 @@ const OPTIONS: Option[] = [
   { label: "Exception Handling", value: "exceptionHandling" },
 ];
 
-export function Mail({ mails, defaultCollapsed = false }: MailProps) {
+export function Mail({ mails }: MailProps) {
   const [mail] = useMail();
+
+  const [deliveryOrganization, setDeliveryOrganization] = useState("all");
+  const [role, setRole] = useState("all");
+  const [filter, setFilter] = useState("");
 
   return (
     <div className="grid grid-cols-5 max-h-[calc(100vh_-_6rem)]">
@@ -76,15 +81,15 @@ export function Mail({ mails, defaultCollapsed = false }: MailProps) {
           <Label htmlFor="category" className="mt-2">
             Delivery Organization
           </Label>
-          <Select defaultValue="all">
+          <Select defaultValue="all" onValueChange={setDeliveryOrganization}>
             <SelectTrigger id="category" aria-label="Select category">
               <SelectValue placeholder="Select a DO" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All</SelectItem>
-              <SelectItem value="ecst">EC_ST</SelectItem>
-              <SelectItem value="dnd">DnD</SelectItem>
-              <SelectItem value="trace">Trace</SelectItem>
+              <SelectItem value="EC_ST">EC_ST</SelectItem>
+              <SelectItem value="DnD">DnD</SelectItem>
+              <SelectItem value="Trace">Trace</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -92,16 +97,34 @@ export function Mail({ mails, defaultCollapsed = false }: MailProps) {
           <Label htmlFor="category" className="mt-2">
             Role
           </Label>
-          <Select defaultValue="all">
+          <Select defaultValue="all" onValueChange={setRole}>
             <SelectTrigger id="category" aria-label="Select category">
               <SelectValue placeholder="Select a category" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All</SelectItem>
-              <SelectItem value="python">Python Developer</SelectItem>
-              <SelectItem value="net">.NET Developer</SelectItem>
-              <SelectItem value="test">Test Engineer</SelectItem>
-              <SelectItem value="data">Data Engineer</SelectItem>
+              <SelectItem value="Senior Frontend Developer">
+                Senior Frontend Developer
+              </SelectItem>
+              <SelectItem value="Fullstack Developer">
+                Fullstack Developer
+              </SelectItem>
+              <SelectItem value="DevOps Engineer">DevOps Engineer</SelectItem>
+              <SelectItem value="Data Scientist">Data Scientist</SelectItem>
+              <SelectItem value="Database Administrator">
+                Database Administrator
+              </SelectItem>
+              <SelectItem value="Machine Learning Engineer">
+                Machine Learning Engineer
+              </SelectItem>
+              <SelectItem value="Software Architect">
+                Software Architect
+              </SelectItem>
+
+              <SelectItem value="System Administrator">
+                System Administrator
+              </SelectItem>
+              <SelectItem value="Network Engineer">Network Engineer</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -147,7 +170,12 @@ export function Mail({ mails, defaultCollapsed = false }: MailProps) {
             </div>
           </form>
         </div>
-        <MailList items={mails} />
+        <MailList
+          items={mails}
+          deliveryOrganization={deliveryOrganization}
+          role={role}
+          filter={filter}
+        />
       </div>
 
       <div className="col-span-2">
