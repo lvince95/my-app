@@ -159,7 +159,7 @@ export function Mail({ mails }: MailProps) {
       </div>
       <div className="col-span-2 border-r">
         <div className="flex items-center px-4 py-2 h-[52px]">
-          <h1 className="text-xl font-bold">Employees found (11)</h1>
+          <h1 className="text-xl font-bold">Employees found</h1>
         </div>
         <Separator />
         <div className="bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
